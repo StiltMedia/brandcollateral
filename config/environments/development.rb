@@ -45,7 +45,7 @@ Rails.application.configure do
     :password =>       ENV['MANDRILL_APIKEY'],
     :domain =>         'http://localhost:3000',
     :authentication => :plain
-}
-ActionMailer::Base.delivery_method = :smtp
+  }
+  ActionMailer::Base.delivery_method = :smtp
 
 end
