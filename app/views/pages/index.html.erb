@@ -1,1 +1,183 @@
-Test
+<!-- Header Starts -->
+<main id="top" class="masthead" role="main">
+  <div class="container">
+    <!-- Startup Logo -->
+    <div class="logo">
+      <%= link_to image_tag('bc_logo.png'), root_path %>
+    </div>
+    <!-- Hero Title -->
+    <h1 class="main-title">Looking for custom branded USBs?</h1>
+    <!-- Sub Title -->
+    <h4 class="sub-title">We can guarantee to beat any price. Try us!</h4>
+    <!-- Quick Features and form -->
+    <div class="row has-padding-top">
+
+    <!-- Signup form -->
+      <div class="col-sm-6 col-sm-offset-3 col-md-offset-0 col-md-4 col-md-push-8">
+        <div class="contact-form">
+          <div class="point-arrow hidden-xs hidden-sm"><%= image_tag 'arrow-dark.png', align: 'arrow' %></div>
+          <h6 class="mini-title">Get a quote in under 15 minutes<br>
+            or call us at <strong ><font color="#293342">1 (888) 520-8688</font></strong>.</h6>
+          <form class="form" id="phpcontactform">
+            <div class="form-group">
+              <input class="form-control input-lg" type="text" placeholder="Full Name*" name="name" id="name" required>
+            </div>
+            <div class="form-group">
+              <input class="form-control input-lg" type="text" placeholder="Company" name="company" id="company">
+            </div>
+            <div class="form-group">
+              <input class="form-control input-lg" type="email" placeholder="Email*" name="email" id="email" required>
+            </div>
+            <div class="form-group">
+              <input class="form-control input-lg" type="text" placeholder="Phone Number" name="phone" id="phone">
+            </div>
+            <div class="form-group">
+              <input class="form-control input-lg" type="text" placeholder="Quantity*" name="quantity" id="quantity" required>
+            </div>
+            <div class="form-group">
+              <select class="form-control input-lg" id="capacity">
+                <option>Select Capacity</option>
+                <option value="64MB">64 MB</option>
+                <option value="128MB">128 MB</option>
+                <option value="256MB">256 MB</option>
+                <option value="512MB">512 MB</option>
+                <option value="1GB">1 GB</option>
+                <option value="2GB">2 GB</option>
+                <option value="4GB">4 GB</option>
+                <option value="8GB">8 GB</option>
+                <option value="16GB">16 GB</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea rows="4" cols="50" class="form-control input-lg" type="text" placeholder="Notes" name="notes" id="notes"></textarea>
+            </div>
+            <input class="btn btn-success btn-lg btn-block" type="submit" value="Request Quote">
+            <span class="loading"></span>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-8 col-md-pull-4">
+        <%= image_tag 'usbs.png', class: 'img-img-responsive' %>
+      </div>
+
+
+    </div>
+    <!-- // Contact  form Ends -->
+
+  </div>
+</main>
+<!-- // Parallax Header Ends -->
+<!-- Container -->
+<div class="container" id="explore">
+  <!-- Featured Image + Desc -->
+  <div class="row has-padding-top">
+    <div class="col-md-4"><%= image_tag 'logo_icon.png', class: 'img-responsive center-block' %> </div>
+    <div class="col-md-8">
+      <div class="quick-features">
+        <h4 class="features-lead">Here are a few key reason why Brand Collateral is the right choice.</h4>
+        <div class="featues-single"><%= image_tag 'icon-color-1.png', class: 'pull-left' %>
+          <h5>FREE Printing on Reverse Side</h5>
+          <p>All our prices include printing on both sides. We don't charge extra like most companies</p>
+        </div>
+        <div class="featues-single"><%= image_tag 'icon-color-2.png', class: 'pull-left' %>
+          <h5>FREE lifetime guarantee!</h5>
+          <p>e offer lifetime guarantee on all of our flash drives and memory. If your flash drive fails under normal use circumstances, we will replace the drive at no cost to you.</p>
+        </div>
+        <div class="featues-single"><%= image_tag 'icon-color-3.png', class: 'pull-left' %>
+          <h5>Turnaround Guaranteed</h5>
+          <p>We will get you your quote within 15 minutes! Once your order is placed, you will be given a completion data which we guarantee to keep or you money back!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //Featured Image + Desc -->
+
+
+
+
+
+
+
+
+
+  <!-- Client Logos -->
+  <div class="section-title">
+    <h2>You are in a good company</h2>
+    <h4>We are trusted by many well known brand</h4>
+  </div>
+  <section class="row clientlogo breath">
+    <div class="col-md-12 text-center"><%= image_tag 'client-logos.png' %></div>
+  </section>
+  <!-- // End Client Logos -->
+
+</div>
+<!-- // Container Ends -->
+
+<!-- Grey Highlight Section -->
+<div class="highlight testimonials">
+  <div class="container">
+
+    <!-- Testimonials -->
+    <div class="text-center">
+      <%= image_tag 'quote-icon.png', class: 'has-padding-top' %>
+    </div>
+    <section class="row has-margin-bottom">
+      <div class="col-md-8 col-md-offset-2">
+        <blockquote>I always use Brand Collateral for our custom USB printing needs. They are the only ones I trust with my agency clients. They always surpass all of my expectations and meet deadlines</blockquote>
+        <div class="clientblock">
+          <%= image_tag 'client-img.png' %>
+          <p><strong>Guigo Simoes</strong> <br>
+            CEO &amp; Founder of Stilt Media</p>
+        </div>
+      </div>
+
+    </section>
+    <!-- // End Testimonials -->
+
+  </div>
+</div>
+<!-- // End Grey Highlight Section -->
+
+<!-- Container -->
+<div class="container">
+
+
+
+  <!-- FAQ -->
+  <div class="section-title">
+    <h2>Frequently Asked Questions</h2>
+    <h4>Got questions? We have got answers</h4>
+  </div>
+  <section class="row faq breath">
+    <div class="col-md-6">
+      <h6>Are there any set up fees?</h6>
+      <p>Printing on our usb drives involves no set-up fees. Custom shaped orders may require a set-up fee with the first order. All subsequent orders of custom shapes will require no additional fees if the final design is unchanged.</p>
+      <h6>Do you ship internationally?</h6>
+      <p>Shipping internationally is no problem. Currently, only the US and Canada are included in our free shipping. Be aware that some international shipments may be subject to taxes, duties, or brokerage fees.</p>
+    </div>
+    <div class="col-md-6">
+      <h6>What is your lifetime guarantee?</h6>
+      <p>We offer lifetime guarantee on all of our flash drives and memory. If your flash drive fails under normal use circumstances, we will replace the drive at no cost to you.</p>
+      <h6>What payment types do you accept?</h6>
+      <p>Brand Collateral accepts purchase orders, all major credit cards, PayPal, check, cashier's check, and wire transfer.s</p>
+    </div>
+  </section>
+  <!-- // End FAQ -->
+
+</div>
+<!-- // Container Ends -->
+
+
+
+<!-- Container -->
+<div class="container">
+  <section class="row breath">
+    <div class="col-md-12 footerlinks">
+      <p>&copy; 2015 Brand Collateral LLC. All Rights Reserved</p>
+    </div>
+  </section>
+  <!-- // End Client Logos -->
+
+</div>
+<!-- // Container Ends -->
