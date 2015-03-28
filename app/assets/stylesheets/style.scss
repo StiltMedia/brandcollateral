@@ -23,7 +23,7 @@ Author URI: http://themeforest.net/user/surjithctly
 7. FOOTER
 8. CUSTOM MEDIA QUERIES
 
-If you having trouble in editing css. please send a mail to support@surjithctly.in - 
+If you having trouble in editing css. please send a mail to support@surjithctly.in -
 I will really help you
 
 */
@@ -112,17 +112,17 @@ box-shadow: none;
 	margin-top:40px;
 }
 .has-no-margin {
-	margin:0;	
+	margin:0;
 }
 .has-no-padding {
-	padding:0;	
+	padding:0;
 }
 .has-no-padding-horizontal {
 	padding-left:0!important;
 	padding-right:0!important;
 }
 .has-margin-vertical {
-	margin:20px 0 30px;	
+	margin:20px 0 30px;
 }
 .has-margin-top {
  	margin-top:40px;
@@ -135,7 +135,7 @@ box-shadow: none;
 .has-padding-top {
  	padding-top:40px;
 }
- 
+
 /*========== 1 a. SUB PAGES ==============*/
 
 
@@ -154,7 +154,7 @@ box-shadow: none;
 	color: #FFF;
 	text-align: center;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
-	background-color: #323e4f;
+	background-color: white;
 }
 
 .masthead .main-title {
@@ -162,7 +162,7 @@ box-shadow: none;
 }
 
 .masthead .sub-title {
-	color:#adb8c7;	
+	color:#adb8c7;
 	margin-top: 0;
 }
 
@@ -223,7 +223,7 @@ box-shadow: none;
 .btn-warning {
 	line-height: 1.8;
 	-webkit-box-shadow: 0 3px 0 rgb(177, 116, 29);
-	box-shadow: 0 3px 0 rgb(177, 116, 29);	
+	box-shadow: 0 3px 0 rgb(177, 116, 29);
 }
 
 .btn-warning:hover, .btn-warning:focus, .btn-warning:active {
@@ -322,7 +322,7 @@ to {
 .contact-form {
 	background:#4a5565;
 	border-radius:3px;
-	padding:15px;	
+	padding:15px;
 	text-align:left;
 	position:relative;
 }
@@ -340,12 +340,12 @@ to {
 
 .loading p {
 	margin: 10px 0 0 0;
-	text-align:center;	
+	text-align:center;
 }
 
 
 .point-arrow {
-	position:absolute;	
+	position:absolute;
 	left:-65px;
 	top:-30px;
 }
@@ -353,7 +353,7 @@ to {
 /*Quick Features*/
 
 .quick-features {
-	text-align:left;	
+	text-align:left;
 }
 
 .features-lead {
@@ -362,7 +362,7 @@ to {
 }
 
 .featues-single {
-	margin-bottom:30px;	
+	margin-bottom:30px;
 }
 
 .featues-single img {
@@ -370,19 +370,19 @@ to {
 }
 
 .featues-single h5 {
-	margin-bottom:10px;	
+	margin-bottom:10px;
 	margin-left:85px;
 	color:#323e4f;
 }
 
 .featues-single p {
-	color:#adb8c7;	
+	color:#adb8c7;
 	margin-left:85px;
 	margin-bottom:0;
 }
 
 .masthead .featues-single h5, .masthead .features-lead {
-	color:#fff;	
+	color:#fff;
 }
 
 /*========== 3. HERO IMAGE ==============*/
@@ -443,7 +443,7 @@ to {
 	margin:0 auto;
 }
 
- 
+
 
 /*========== 5. TESTIMONIALS ==============*/
 
@@ -597,7 +597,7 @@ font-style:italic;
 	background-color: #323e4f;
 }
 .footercta .section-title {
-	margin-top:0;	
+	margin-top:0;
 }
 .footercta .section-title h2 {
 		color: #FFF;
@@ -655,29 +655,29 @@ line-height: 40px;
 padding: 40px 15px;
 }
 }
- 
+
  @media (max-device-width: 992px) {
-	 
+
 .masthead {
 background-size: cover;
 background-attachment: scroll;
 }
-	 
+
  }
- 
+
 .signup-block {
-	padding:20px;	
+	padding:20px;
 	background:rgba(255,255,255,0.25);
 	border-radius:7px;
 	margin-bottom:25px;
 }
 
 .form-group.last {
-	margin-bottom:0;	
+	margin-bottom:0;
 }
 
 .multiple-btns .btn + .btn {
-	margin:10px;	
+	margin:10px;
 }
 
  s
@@ -723,30 +723,23 @@ padding: 8px 15px;
  /*
  ------ LIGHT LAYOUT ------- s
  */
- 
- 
+
+
 .light .masthead {
-background: #FCF9F5; /* Old browsers */
-background: -moz-linear-gradient(top,  #ffffff 50%, #fdf8f2 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,#ffffff), color-stop(100%,#fdf8f2)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #ffffff 50%,#fdf8f2 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #ffffff 50%,#fdf8f2 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #ffffff 50%,#fdf8f2 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #ffffff 50%,#fdf8f2 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fdf8f2',GradientType=0 ); /* IE6-9 */
-color:#293342;	 
+background: white; /* Old browsers */
+color:#293342;
 padding-bottom:0;
  }
 .light .masthead .sub-title {
 color: #909090;
 font-weight: normal;
  }
- 
+
 .light .contact-form {
 background: #FFFFFF;
 border: 1px solid #EDEDED;
  }
- 
+
 .light .form-control {
 border: 1px solid #CCC;
 height: 55px;
@@ -760,7 +753,7 @@ height: 55px;
 /*Layout 3 Title and Image Separated*/
 
 .masthead .bg-image {
-	background:url(../images/edu-bg.jpg) top center no-repeat;	
+	background:url(../images/edu-bg.jpg) top center no-repeat;
 	background-size:cover;
 }
 
@@ -772,10 +765,10 @@ margin-top: 45px;
 /*Layout 4 Full Header BG*/
 
 .masthead.header-bg {
-	background:url(../images/travel-bg.jpg) top center no-repeat;	
-	background-size:cover;	
+	background:url(../images/travel-bg.jpg) top center no-repeat;
+	background-size:cover;
 }
 
 .color-white {
-	color:#FFF!important;	
+	color:#FFF!important;
 }
