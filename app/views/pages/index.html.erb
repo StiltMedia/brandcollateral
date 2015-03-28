@@ -42,11 +42,11 @@
               <% end %>
             </div>
             <div class="form-group">
-              <%= f.select :style_type, nil, {prompt: 'Select Style'}, class: 'form-control input-lg' do %>
-                <% [["Bottle Opener USB"],["Classic USB"],["Credit Card USB"],["Curved USB"],["Key USB"],["Laser Pen USB"],["Short Classic USB"],["Swivel SWM USB"],["Tron USB"],["Twister USB"],["Wristband USB"],["Other"],["Not Sure"]].each do |i| %>
-                  <%= content_tag(:option, i.first) %>
-                <% end %>
-              <% end %>
+              <%# f.select :style_type, nil, {prompt: 'Select Style'}, class: 'form-control input-lg' do %>
+                <%# [["Bottle Opener USB"],["Classic USB"],["Credit Card USB"],["Curved USB"],["Key USB"],["Laser Pen USB"],["Short Classic USB"],["Swivel SWM USB"],["Tron USB"],["Twister USB"],["Wristband USB"],["Other"],["Not Sure"]].each do |i| %>
+                  <%# content_tag(:option, i.first) %>
+                <%# end %>
+              <%# end %>
             </div>
             <div class="form-group">
               <%= f.text_field :notes, placeholder: "Notes", class: 'form-control input-lg' %>
