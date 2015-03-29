@@ -160,7 +160,7 @@
       <h6>What is your lifetime guarantee?</h6>
       <p>We offer lifetime guarantee on all of our flash drives and memory. If your flash drive fails under normal use circumstances, we will replace the drive at no cost to you.</p>
       <h6>What payment types do you accept?</h6>
-      <p>Brand Collateral accepts purchase orders, all major credit cards, PayPal, check, cashier's check, and wire transfer.s</p>
+      <p>Brand Collateral accepts purchase orders, all major credit cards, PayPal, check, cashier's check, and wire transfers.</p>
     </div>
   </section>
   <!-- // End FAQ -->
@@ -181,3 +181,21 @@
 
 </div>
 <!-- // Container Ends -->
+
+<script charset="utf-8">
+  $("#new_contact").validate({
+    rules: {
+      "contact[full_name]": {required: true},
+      "contact[email]": {email:true, required: true},
+      "contact[quantity]": {required: true, digits: true},
+      "contact[phone]": {required: false, digits: true, minlength: 10}
+    }
+    // messages: {
+    //   example5: "Just check the box<h5 class='text-error'>You aren't going to read the EULA</h5>"
+    // },
+    // tooltip_options: {
+    //   example4: {trigger:'focus'},
+    //   example5: {placement:'right',html:true}
+    // },
+  });
+</script>
