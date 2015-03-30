@@ -4,6 +4,9 @@ class PagesController < ApplicationController
     @contact = Contact.new
   end
 
+  def flashdrives
+    @contact = Contact.new
+  end
 
   def create_contact
     @contact = Contact.create(contact_params)
