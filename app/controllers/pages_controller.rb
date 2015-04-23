@@ -11,7 +11,7 @@ class PagesController < ApplicationController
   def create_contact
     @contact = Contact.create(contact_params)
     if @contact.save
-      redirect_to thanks_path
+      redirect_to "http://brandcollateral.com/pages/thanks"
     end
   end
 

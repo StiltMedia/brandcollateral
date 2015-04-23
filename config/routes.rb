@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
-
+get '/customusb' => 'pages#index'
   get '/flash-drives' => 'pages#flashdrives'
   get '/thanks' => 'pages#thanks'
   post '/contact' => 'pages#create_contact', as: :contacts
