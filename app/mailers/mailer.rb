@@ -9,7 +9,7 @@ class Mailer < ApplicationMailer
 
   def camp2_form(campaign2)
     @campaign2 = campaign2
-    mail :to  => "mark@stiltmedia.com", :from => "Campaign_2@brandcollateral.com", :subject => "Brand Collateral Campaign 2 Form"
+    mail :to  => "leads@brandcollateral.com", :from => "Campaign_2@brandcollateral.com", :subject => "Brand Collateral Campaign 2 Form"
   end
 
 
