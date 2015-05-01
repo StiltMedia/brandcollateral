@@ -5,10 +5,10 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
-get '/customusb' => 'pages#index'
   get '/flash-drives' => 'pages#flashdrives'
   get '/thanks' => 'pages#thanks'
   post '/contact' => 'pages#create_contact', as: :contacts
+  post '/campaign-2' => 'pages#create_campaign2', as: :campaign2s
 
 
   # The priority is based upon order of creation: first created -> highest priority.

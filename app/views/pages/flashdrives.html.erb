@@ -3,7 +3,7 @@
   <div class="container">
     <!-- Startup Logo -->
     <div class="logo">
-      <%= link_to image_tag('bc_logo.png'), root_path %>
+      <%= link_to image_tag('bc_logo.png'), "http://brandcollateral.com" %>
     </div>
     <!-- Hero Title -->
     <h1 class="main-title">Looking for custom branded USBs?</h1>
@@ -18,9 +18,9 @@
           <div class="point-arrow hidden-xs hidden-sm"><%= image_tag 'arrow-dark.png', align: 'arrow' %></div>
           <h6 class="mini-title">Get a quote in under 15 minutes<br>
             or call us at <strong ><span style="color:#293342;" class="number">1 (888) 520-8688</span></strong>.</h6>
-            <%= form_for(@contact) do |f| %>
+            <%= simple_form_for(@campaign2) do |f| %>
             <div class="form-group">
-              <%= f.text_field :full_name, placeholder: "Full Name*", class: 'form-control input-lg' %>
+              <%= f.input :full_name, label: false, placeholder: "Full Name*", input_html: {class: 'form-control input-lg'} %>
             </div>
             <div class="form-group">
               <%= f.text_field :company, placeholder: "Company", class: 'form-control input-lg' %>
@@ -33,23 +33,24 @@
             </div>
             <div class="form-group">
               <%= f.text_field :quantity, placeholder: "Quantity*", class: 'form-control input-lg' %>
+              <p style="color:red;padding-left:10px;margin-bottom:0px;"><em>Minimum order is 25</em></p>
             </div>
             <div class="form-group">
-              <%= f.select :capacity, nil, {prompt: 'Select Capacity'}, class: 'form-control input-lg' do %>
-                <% [["64 MB"],["128 MB"],["256 MB"],["512 MB"],["1 GB"],["2 GB"],["4 GB"],["8 GB"],["16 GB"]].each do |i| %>
+              <%= f.select :capacity, nil, {prompt: 'Select Capacity*'}, class: 'form-control input-lg' do %>
+                <% [["64 MB"],["128 MB"],["256 MB"],["512 MB"],["1 GB"],["2 GB"],["4 GB"],["8 GB"],["16 GB"],["32 GB"],["64 GB"]].each do |i| %>
                   <%= content_tag(:option, i.first) %>
                 <% end %>
               <% end %>
             </div>
             <div class="form-group">
-              <%= f.select :style_type, nil, {prompt: 'Select Style'}, class: 'form-control input-lg' do %>
+              <%= f.select :style_type, nil, {prompt: 'Select Style*'}, class: 'form-control input-lg' do %>
                 <% [["Bottle Opener USB"],["Classic USB"],["Credit Card USB"],["Curved USB"],["Key USB"],["Laser Pen USB"],["Short Classic USB"],["Swivel SWM USB"],["Tron USB"],["Twister USB"],["Wristband USB"],["Other"],["Not Sure"]].each do |i| %>
                   <%= content_tag(:option, i.first) %>
                 <% end %>
               <% end %>
             </div>
             <div class="form-group">
-              <%= f.text_field :notes, placeholder: "Notes", class: 'form-control input-lg' %>
+              <%= f.text_area :notes, placeholder: "Notes", class: 'form-control input-lg' %>
             </div>
 
             <%= f.submit 'Request Quote', class: 'btn btn-success btn-lg btn-block' %>
@@ -58,77 +59,10 @@
       </div>
 
       <div class="col-sm-12 col-md-8 col-md-pull-4">
-        <%= image_tag 'usbs-2.png', class: 'img-responsive' %>
-        <br>
-        <br>
-        <div class="table-responsive">
-          <table class="table table-hover">
-            <thead>
-            <tr>
-              <td></td>
-              <td>64MB</td>
-              <td>128MB</td>
-              <td>256MB</td>
-              <td>512MB</td>
-              <td>1GB</td>
-              <td>2GB</td>
-              <td>4GB</td>
-              <td>8GB</td>
-              <td>16GB</td>
-            </tr>
-            </thead>
-            <tr>
-              <td>25-49</td>
-              <td>$7.39</td>
-              <td>$7.42</td>
-              <td>$7.53</td>
-              <td>$7.68</td>
-              <td>$8.05</td>
-              <td>$8.12</td>
-              <td>$8.22</td>
-              <td>$8.38</td>
-              <td>$10.20</td>
-            </tr>
-            <tr>
-              <td>50-99</td>
-              <td>$4.14</td>
-              <td>$4.17</td>
-              <td>$4.28</td>
-              <td>$4.43</td>
-              <td>$4.80</td>
-              <td>$4.87</td>
-              <td>$4.97</td>
-              <td>$5.13</td>
-              <td>$6.95</td>
-            </tr>
-            <tr>
-              <td>100-249</td>
-              <td>$3.14</td>
-              <td>$3.17</td>
-              <td>$3.28</td>
-              <td>$3.43</td>
-              <td>$3.80</td>
-              <td>$3.87</td>
-              <td>$3.97</td>
-              <td>$4.13</td>
-              <td>$5.95</td>
-            </tr>
-            <tr>
-              <td>250-499</td>
-              <td>$2.64</td>
-              <td>$2.67</td>
-              <td>$2.78</td>
-              <td>$2.93</td>
-              <td>$3.30</td>
-              <td>$3.37</td>
-              <td>$3.47</td>
-              <td>$3.63</td>
-              <td>$5.45</td>
-            </tr>
-          </table>
-          <p>***For orders over 500 units please submit an inquiry with the form provided</p>
-        </div>
+        <%= image_tag 'usbs.png', class: 'img-responsive' %>
       </div>
+
+
     </div>
     <!-- // Contact  form Ends -->
 
@@ -254,8 +188,10 @@
     rules: {
       "contact[full_name]": {required: true},
       "contact[email]": {email:true, required: true},
-      "contact[quantity]": {required: true, digits: true},
-      "contact[phone]": {required: false, digits: true, minlength: 10}
+      "contact[quantity]": {required: true, digits: true, min: 25},
+      "contact[phone]": {required: false, digits: true, minlength: 10},
+      "contact[capacity]": {required: true},
+      "contact[style_type]": {required: true}
     }
     // messages: {
     //   example5: "Just check the box<h5 class='text-error'>You aren't going to read the EULA</h5>"
