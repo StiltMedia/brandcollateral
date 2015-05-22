@@ -18,43 +18,94 @@
           <div class="point-arrow hidden-xs hidden-sm"><%= image_tag 'arrow-dark.png', align: 'arrow' %></div>
           <h6 class="mini-title">Get a quote in under 15 minutes<br>
             or call us at <strong ><span style="color:#293342;" class="number">1 (888) 520-8688</span></strong>.</h6>
-            <%= form_for(@contact) do |f| %>
+
+          <!--  ----------------------------------------------------------------------  -->
+          <!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+          <!--  If necessary, please modify the charset parameter to specify the        -->
+          <!--  character set of your HTML page.                                        -->
+          <!--  ----------------------------------------------------------------------  -->
+
+          <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+
+          <!--  ----------------------------------------------------------------------  -->
+          <!--  NOTE: Please add the following <FORM> element to your page.             -->
+          <!--  ----------------------------------------------------------------------  -->
+
+          <form action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" id="new_contact">
+
+          <input type=hidden name="oid" value="00D1a000000JZ18">
+          <input type=hidden name="retURL" value="http://brandcollateral.com/pages/thanks">
+
+          <!--  ----------------------------------------------------------------------  -->
+          <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+          <!--  these lines if you wish to test in debug mode.                          -->
+          <!--  <input type="hidden" name="debug" value=1>                              -->
+          <!--  <input type="hidden" name="debugEmail"                                  -->
+          <!--  value="guigo@brandcollateral.com">                                      -->
+          <!--  ----------------------------------------------------------------------  -->
+          <div class="form-group">
+            <input id="00N1a0000037Pwj" maxlength="40" name="00N1a0000037Pwj" size="20" type="text" placeholder="Full Name*" class="form-control input-lg" />
+          </div>
+          <div class="form-group">
+            <input id="company" maxlength="40" name="company" size="20" type="text" placeholder="Company" class="form-control input-lg" />
+          </div>
+
             <div class="form-group">
-              <%= f.text_field :full_name, placeholder: "Full Name*", class: 'form-control input-lg' %>
-            </div>
-            <div class="form-group">
-              <%= f.text_field :company, placeholder: "Company", class: 'form-control input-lg' %>
-            </div>
-            <div class="form-group">
-              <%= f.text_field :email, placeholder: "Email*", class: 'form-control input-lg' %>
-            </div>
-            <div class="form-group">
-              <%= f.text_field :phone, placeholder: "Phone Number", class: 'form-control input-lg' %>
-            </div>
-            <div class="form-group">
-              <%= f.text_field :quantity, placeholder: "Quantity*", class: 'form-control input-lg' %>
-              <p style="color:red;padding-left:10px;margin-bottom:0px;"><em>Minimum order is 25</em></p>
-            </div>
-            <div class="form-group">
-              <%= f.select :capacity, nil, {prompt: 'Select Capacity*'}, class: 'form-control input-lg' do %>
-                <% [["64 MB"],["128 MB"],["256 MB"],["512 MB"],["1 GB"],["2 GB"],["4 GB"],["8 GB"],["16 GB"],["32 GB"],["64 GB"]].each do |i| %>
-                  <%= content_tag(:option, i.first) %>
-                <% end %>
-              <% end %>
-            </div>
-            <div class="form-group">
-              <%= f.select :style_type, nil, {prompt: 'Select Style*'}, class: 'form-control input-lg' do %>
-                <% [["Bottle Opener USB"],["Classic USB"],["Credit Card USB"],["Curved USB"],["Key USB"],["Laser Pen USB"],["Short Classic USB"],["Swivel SWM USB"],["Tron USB"],["Twister USB"],["Wristband USB"],["Other"],["Not Sure"]].each do |i| %>
-                  <%= content_tag(:option, i.first) %>
-                <% end %>
-              <% end %>
-            </div>
-            <div class="form-group">
-              <%= f.text_area :notes, placeholder: "Notes", class: 'form-control input-lg' %>
+              <input id="email" maxlength="80" name="email" size="20" type="text" placeholder="Email*" class="form-control input-lg" />
             </div>
 
-            <%= f.submit 'Request Quote', class: 'btn btn-success btn-lg btn-block' %>
-            <% end %>
+            <div class="form-group">
+              <input id="phone" maxlength="40" name="phone" size="20" type="text" placeholder="Phone" class="form-control input-lg" />
+            </div>
+
+            <div class="form-group">
+              <input  id="00N1a0000037Pwo" name="00N1a0000037Pwo" size="20" type="text" placeholder="Quantity*" class="form-control input-lg" />
+              <p style="color:red;padding-left:10px;margin-bottom:0px;"><em>Minimum order is 25</em></p>
+            </div>
+
+            <div class="form-group">
+              <select  id="00N1a0000037Pxm" name="00N1a0000037Pxm" title="Capacity" class="form-control input-lg"><option value="">Select Capacity*</option>
+                <option value="64MB">64MB</option>
+                <option value="128MB">128MB</option>
+                <option value="256MB">256MB</option>
+                <option value="512MB">512MB</option>
+                <option value="1GB">1GB</option>
+                <option value="2GB">2GB</option>
+                <option value="4GB">4GB</option>
+                <option value="8GB">8GB</option>
+                <option value="16GB">16GB</option>
+                <option value="32GB">32GB</option>
+                <option value="64GB">64GB</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <select  id="00N1a0000037Pya" name="00N1a0000037Pya" title="Style" class="form-control input-lg"><option value="">Select Style*</option>
+                <option value="Bottle Opener USB">Bottle Opener USB</option>
+                <option value="Classic USB">Classic USB</option>
+                <option value="Credit Card USB">Credit Card USB</option>
+                <option value="Curved USB">Curved USB</option>
+                <option value="Key USB">Key USB</option>
+                <option value="Laser Pen USB">Laser Pen USB</option>
+                <option value="Short Classic USB">Short Classic USB</option>
+                <option value="Swivel SWM USB">Swivel SWM USB</option>
+                <option value="Tron USB">Tron USB</option>
+                <option value="Twister USB">Twister USB</option>
+                <option value="Wristband USB">Wristband USB</option>
+                <option value="Other">Other</option>
+                <option value="Not Sure">Not Sure</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <textarea  id="00N1a000003JJyI" name="00N1a000003JJyI" type="text" wrap="soft" placeholder="Notes" class="form-control input-lg"></textarea>
+            </div>
+
+            <input type="submit" name="submit" value="Request Quote" class="btn btn-success btn-lg btn-block">
+
+          </form>
+
+
         </div>
       </div>
 
@@ -170,7 +221,6 @@
 <!-- // Container Ends -->
 
 
-
 <!-- Container -->
 <div class="container">
   <section class="row breath">
@@ -186,12 +236,12 @@
 <script charset="utf-8">
   $("#new_contact").validate({
     rules: {
-      "contact[full_name]": {required: true},
-      "contact[email]": {email:true, required: true},
-      "contact[quantity]": {required: true, digits: true, min: 25},
-      "contact[phone]": {required: false, digits: true, minlength: 10},
-      "contact[capacity]": {required: true},
-      "contact[style_type]": {required: true}
+      "00N1a0000037Pwj": {required: true},
+      "email": {email:true, required: true},
+      "00N1a0000037Pwo": {required: true, digits: true, min: 25},
+      "phone": {required: false, digits: true, minlength: 10},
+      "00N1a0000037Pxm": {required: true},
+      "00N1a0000037Pya": {required: true}
     }
     // messages: {
     //   example5: "Just check the box<h5 class='text-error'>You aren't going to read the EULA</h5>"

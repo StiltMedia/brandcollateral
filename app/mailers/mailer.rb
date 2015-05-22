@@ -4,7 +4,7 @@ class Mailer < ApplicationMailer
 
   def contact_form(contact)
     @contact = contact
-    mail :to  => "leads@brandcollateral.com", :from => "ContactForm@brandcollateral.com", :subject => "Brand Collateral Contact Form"
+    mail :to  => "mark@stiltmedia.com", :from => "ContactForm@brandcollateral.com", :subject => "Brand Collateral Contact Form"
   end
 
   def camp2_form(campaign2)
