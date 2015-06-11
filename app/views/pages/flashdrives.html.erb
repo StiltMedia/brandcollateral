@@ -30,6 +30,7 @@
               <input  id="00N1a000005HgZB" maxlength="40" name="00N1a000005HgZB" type="hidden" value=""/>
               <input id="00N1a000005Iyaa" maxlength="40" name="00N1a000005Iyaa" type="hidden" value=""/>
               <input  id="00N1a000005XMOJ" maxlength="25" name="00N1a000005XMOJ" type="hidden" value=""/>
+              <input  id="00N1a000005XTsG" maxlength="10" name="00N1a000005XTsG" type="hidden" value=""/>
 
               <div class="form-group">
                 <input id="00N1a0000037Pwj" maxlength="40" name="00N1a0000037Pwj" size="20" type="text" placeholder="Full Name*" class="form-control input-lg" />
@@ -293,6 +294,9 @@
   var medium = $_GET['medium'];
   var campaign = $_GET['campaign'];
   var keywords = $_GET['keyword'];
+  var matchtype = $_GET['matchtype'];
+  var device = $_GET['device'];
+  var adgroup = $_GET['adgroup'];
 
 
   var url = window.location.href;
@@ -308,4 +312,8 @@
   document.getElementById("00N1a000005Iyaa").value = medium; /* Medium */
   document.getElementById("00N1a000005XMOJ").value = campaign; /* Campaign Name */
   document.getElementById("00N1a000005HgPp").value = keywords; /* Keywords */
+  document.getElementById("00N1a000005HgA7").value = matchtype; /* Match Type */
+  document.getElementById("00N1a000005XTsG").value = device; /* Device */
+  document.getElementById("00N1a000005HftD").value = adgroup; /* Ad Group */
+  
 </script>
