@@ -18,43 +18,81 @@
           <div class="point-arrow hidden-xs hidden-sm"><%= image_tag 'arrow-dark.png', align: 'arrow' %></div>
           <h6 class="mini-title">Get a quote in under 15 minutes<br>
             or call us at <strong ><span style="color:#293342;" class="number">1 (888) 520-8688</span></strong>.</h6>
-            <%= simple_form_for(@campaign2) do |f| %>
-            <div class="form-group">
-              <%= f.input :full_name, label: false, placeholder: "Full Name*", input_html: {class: 'form-control input-lg'} %>
-            </div>
-            <div class="form-group">
-              <%= f.text_field :company, placeholder: "Company", class: 'form-control input-lg' %>
-            </div>
-            <div class="form-group">
-              <%= f.text_field :email, placeholder: "Email*", class: 'form-control input-lg' %>
-            </div>
-            <div class="form-group">
-              <%= f.text_field :phone, placeholder: "Phone Number", class: 'form-control input-lg' %>
-            </div>
-            <div class="form-group">
-              <%= f.text_field :quantity, placeholder: "Quantity*", class: 'form-control input-lg' %>
-              <p style="color:red;padding-left:10px;margin-bottom:0px;"><em>Minimum order is 25</em></p>
-            </div>
-            <div class="form-group">
-              <%= f.select :capacity, nil, {prompt: 'Select Capacity*'}, class: 'form-control input-lg' do %>
-                <% [["64 MB"],["128 MB"],["256 MB"],["512 MB"],["1 GB"],["2 GB"],["4 GB"],["8 GB"],["16 GB"],["32 GB"],["64 GB"]].each do |i| %>
-                  <%= content_tag(:option, i.first) %>
-                <% end %>
-              <% end %>
-            </div>
-            <div class="form-group">
-              <%= f.select :style_type, nil, {prompt: 'Select Style*'}, class: 'form-control input-lg' do %>
-                <% [["Bottle Opener USB"],["Classic USB"],["Credit Card USB"],["Curved USB"],["Key USB"],["Laser Pen USB"],["Short Classic USB"],["Swivel SWM USB"],["Tron USB"],["Twister USB"],["Wristband USB"],["Other"],["Not Sure"]].each do |i| %>
-                  <%= content_tag(:option, i.first) %>
-                <% end %>
-              <% end %>
-            </div>
-            <div class="form-group">
-              <%= f.text_area :notes, placeholder: "Notes", class: 'form-control input-lg' %>
-            </div>
 
-            <%= f.submit 'Request Quote', class: 'btn btn-success btn-lg btn-block' %>
-            <% end %>
+            <form id="new_campaign2" action="https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+
+              <input type=hidden name="oid" value="00D1a000000JZ18">
+              <input type=hidden name="retURL" value="http://brandcollateral.com/pages/thanks">
+              <input  id="00N1a000005HftD" maxlength="40" name="00N1a000005HftD" type="hidden" value=""/>
+              <input  id="00N1a000005HgA7" maxlength="40" name="00N1a000005HgA7" type="hidden" value=""/>
+              <input  id="00N1a000005HgPp" maxlength="80" name="00N1a000005HgPp" type="hidden" value=""/>
+              <input  id="00N1a000005HgQ9" maxlength="255" name="00N1a000005HgQ9" type="hidden" value=""/>
+              <input  id="00N1a000005HgZB" maxlength="40" name="00N1a000005HgZB" type="hidden" value=""/>
+              <input id="00N1a000005Iyaa" maxlength="40" name="00N1a000005Iyaa" type="hidden" value=""/>
+              <input  id="00N1a000005XMOJ" maxlength="25" name="00N1a000005XMOJ" type="hidden" value=""/>
+
+              <div class="form-group">
+                <input id="00N1a0000037Pwj" maxlength="40" name="00N1a0000037Pwj" size="20" type="text" placeholder="Full Name*" class="form-control input-lg" />
+              </div>
+              <div class="form-group">
+                <input id="company" maxlength="40" name="company" size="20" type="text" placeholder="Company" class="form-control input-lg" />
+              </div>
+
+                <div class="form-group">
+                  <input id="email" maxlength="80" name="email" size="20" type="text" placeholder="Email*" class="form-control input-lg" />
+                </div>
+
+                <div class="form-group">
+                  <input id="phone" maxlength="40" name="phone" size="20" type="text" placeholder="Phone" class="form-control input-lg" />
+                </div>
+
+                <div class="form-group">
+                  <input  id="00N1a0000037Pwo" name="00N1a0000037Pwo" size="20" type="text" placeholder="Quantity*" class="form-control input-lg" />
+                  <p style="color:red;padding-left:10px;margin-bottom:0px;"><em>Minimum order is 25</em></p>
+                </div>
+
+                <div class="form-group">
+                  <select  id="00N1a0000037Pxm" name="00N1a0000037Pxm" title="Capacity" class="form-control input-lg"><option value="">Select Capacity*</option>
+                    <option value="64MB">64MB</option>
+                    <option value="128MB">128MB</option>
+                    <option value="256MB">256MB</option>
+                    <option value="512MB">512MB</option>
+                    <option value="1GB">1GB</option>
+                    <option value="2GB">2GB</option>
+                    <option value="4GB">4GB</option>
+                    <option value="8GB">8GB</option>
+                    <option value="16GB">16GB</option>
+                    <option value="32GB">32GB</option>
+                    <option value="64GB">64GB</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <select  id="00N1a0000037Pya" name="00N1a0000037Pya" title="Style" class="form-control input-lg"><option value="">Select Style*</option>
+                    <option value="Bottle Opener USB">Bottle Opener USB</option>
+                    <option value="Classic USB">Classic USB</option>
+                    <option value="Credit Card USB">Credit Card USB</option>
+                    <option value="Curved USB">Curved USB</option>
+                    <option value="Key USB">Key USB</option>
+                    <option value="Laser Pen USB">Laser Pen USB</option>
+                    <option value="Short Classic USB">Short Classic USB</option>
+                    <option value="Swivel SWM USB">Swivel SWM USB</option>
+                    <option value="Tron USB">Tron USB</option>
+                    <option value="Twister USB">Twister USB</option>
+                    <option value="Wristband USB">Wristband USB</option>
+                    <option value="Other">Other</option>
+                    <option value="Not Sure">Not Sure</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <textarea  id="00N1a000003JJyI" name="00N1a000003JJyI" type="text" wrap="soft" placeholder="Notes" class="form-control input-lg"></textarea>
+                </div>
+
+              <input type="submit" name="submit" value="Request Quote" class="btn btn-success btn-lg btn-block">
+
+            </form>
+
         </div>
       </div>
 
@@ -184,15 +222,15 @@
 <!-- // Container Ends -->
 
 <script charset="utf-8">
-  $("#new_campaign2").validate({
-    rules: {
-      "campaign2[full_name]": {required: true},
-      "campaign2[email]": {email:true, required: true},
-      "campaign2[quantity]": {required: true, digits: true, min: 25},
-      "campaign2[phone]": {required: false, digits: true, minlength: 10},
-      "campaign2[capacity]": {required: true},
-      "campaign2[style_type]": {required: true}
-    }
+  // $("#new_campaign2").validate({
+  //   rules: {
+  //     "00N1a0000037Pwj": {required: true},
+  //     "email": {email:true, required: true},
+  //     "00N1a0000037Pwo": {required: true, digits: true, min: 25},
+  //     "phone": {required: false, digits: true, minlength: 10},
+  //     "00N1a0000037Pxm": {required: true},
+  //     "00N1a0000037Pya": {required: true}
+  //   }
     // messages: {
     //   example5: "Just check the box<h5 class='text-error'>You aren't going to read the EULA</h5>"
     // },
@@ -201,4 +239,73 @@
     //   example5: {placement:'right',html:true}
     // },
   });
+</script>
+
+<script type="text/javascript">
+  // var z = _uGC(document.cookie, '__utmz=', ';');
+  // var source = _uGC(z, 'utmcsr=', '|');
+  // var medium = _uGC(z, 'utmcmd=', '|');
+  // var term = _uGC(z, 'utmctr=', '|');
+  // var content = _uGC(z, 'utmcct=', '|');
+  // var campaign = _uGC(z, 'utmccn=', '|');
+  // var gclid = _uGC(z, 'utmgclid=', '|');
+  // if (gclid !="-") {
+  //  source = 'google';
+  //  medium = 'cpc';
+  // }
+  //
+  // var csegment = _uGC(document.cookie, '__utmv=', ';');
+  // if (csegment != '-') {
+  //  var csegmentex = /[1-9]*?\.(.*)/;
+  //  csegment = csegment.match(csegmentex);
+  //  csegment = csegment[1];
+  //
+  // } else {
+  //  csegment = '';
+  // }
+  //
+  // function _uGC(l,n,s)
+  // {
+  // if (!l || l=="" || !n || n=="" || !s || s=="") return "-";
+  // var i,i2,i3,c="-";
+  // i=l.indexOf(n);
+  // i3=n.indexOf("=")+1;
+  // if (i > -1) {
+  // i2=l.indexOf(s,i); if (i2 < 0){ i2=l.length; }
+  // c=l.substring((i+i3),i2);
+  // }
+  // return c;
+  // }
+  //
+  // document.getElementById("00N1a000005HgBJ").value =medium; /* Campaign_Medium */
+  // document.getElementById("00N1a000005Hfsf").value =source; /* Campaign_Source */
+  // document.getElementById("00N1a000005HgAC").value =campaign; /* Campaign_CampaignName */
+  // document.getElementById("00N1a000005Iyaa").value =term; /* Campaign_Term */
+  // document.getElementById("00N1a000005IyZN").value =content; /* Campaign_Content */
+
+</script>
+
+<script type="text/javascript">
+  var uri = URI(window.location.href);
+  var $_GET = URI(window.location.href).query(true);
+  // alert($_GET['dest']);
+  var adposition = $_GET['adposition'];
+  var medium = $_GET['medium'];
+  var campaign = $_GET['campaign'];
+  var keywords = $_GET['keyword'];
+
+
+  var url = window.location.href;
+  var parser = document.createElement('a');
+
+  parser.href = url;
+
+  var landing = parser.protocol+parser.hostname+parser.pathname;
+
+
+  document.getElementById("00N1a000005HgQ9").value = landing; /* Landing Page URL */
+  document.getElementById("00N1a000005HgZB").value = adposition; /* Ad Position */
+  document.getElementById("00N1a000005Iyaa").value = medium; /* Medium */
+  document.getElementById("00N1a000005XMOJ").value = campaign; /* Campaign Name */
+  document.getElementById("00N1a000005HgPp").value = keywords; /* Keywords */
 </script>
