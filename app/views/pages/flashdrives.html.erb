@@ -224,15 +224,15 @@
 <!-- // Container Ends -->
 
 <script charset="utf-8">
-  // $("#new_campaign2").validate({
-  //   rules: {
-  //     "00N1a0000037Pwj": {required: true},
-  //     "email": {email:true, required: true},
-  //     "00N1a0000037Pwo": {required: true, digits: true, min: 25},
-  //     "phone": {required: false, digits: true, minlength: 10},
-  //     "00N1a0000037Pxm": {required: true},
-  //     "00N1a0000037Pya": {required: true}
-  //   }
+  $("#new_campaign2").validate({
+    rules: {
+      "00N1a0000037Pwj": {required: true},
+      "email": {email:true, required: true},
+      "00N1a0000037Pwo": {required: true, digits: true, min: 25},
+      "phone": {required: false, digits: true, minlength: 10},
+      "00N1a0000037Pxm": {required: true},
+      "00N1a0000037Pya": {required: true}
+    }
     // messages: {
     //   example5: "Just check the box<h5 class='text-error'>You aren't going to read the EULA</h5>"
     // },
@@ -243,49 +243,6 @@
   });
 </script>
 
-<script type="text/javascript">
-  // var z = _uGC(document.cookie, '__utmz=', ';');
-  // var source = _uGC(z, 'utmcsr=', '|');
-  // var medium = _uGC(z, 'utmcmd=', '|');
-  // var term = _uGC(z, 'utmctr=', '|');
-  // var content = _uGC(z, 'utmcct=', '|');
-  // var campaign = _uGC(z, 'utmccn=', '|');
-  // var gclid = _uGC(z, 'utmgclid=', '|');
-  // if (gclid !="-") {
-  //  source = 'google';
-  //  medium = 'cpc';
-  // }
-  //
-  // var csegment = _uGC(document.cookie, '__utmv=', ';');
-  // if (csegment != '-') {
-  //  var csegmentex = /[1-9]*?\.(.*)/;
-  //  csegment = csegment.match(csegmentex);
-  //  csegment = csegment[1];
-  //
-  // } else {
-  //  csegment = '';
-  // }
-  //
-  // function _uGC(l,n,s)
-  // {
-  // if (!l || l=="" || !n || n=="" || !s || s=="") return "-";
-  // var i,i2,i3,c="-";
-  // i=l.indexOf(n);
-  // i3=n.indexOf("=")+1;
-  // if (i > -1) {
-  // i2=l.indexOf(s,i); if (i2 < 0){ i2=l.length; }
-  // c=l.substring((i+i3),i2);
-  // }
-  // return c;
-  // }
-  //
-  // document.getElementById("00N1a000005HgBJ").value =medium; /* Campaign_Medium */
-  // document.getElementById("00N1a000005Hfsf").value =source; /* Campaign_Source */
-  // document.getElementById("00N1a000005HgAC").value =campaign; /* Campaign_CampaignName */
-  // document.getElementById("00N1a000005Iyaa").value =term; /* Campaign_Term */
-  // document.getElementById("00N1a000005IyZN").value =content; /* Campaign_Content */
-
-</script>
 
 <script type="text/javascript">
   var uri = URI(window.location.href);
@@ -318,5 +275,4 @@
   document.getElementById("00N1a000005XTsG").value = device; /* Device */
   document.getElementById("00N1a000005HftD").value = adgroup; /* Ad Group */
   document.getElementById("00N1a000005XUtu").value = source; /* Campaign Source */
-
 </script>
