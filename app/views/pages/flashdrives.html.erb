@@ -34,8 +34,13 @@
               <input  id="00N1a000005XUtu" maxlength="25" name="00N1a000005XUtu" type="hidden" value=""/>
 
               <div class="form-group">
-                <input id="00N1a0000037Pwj" maxlength="40" name="00N1a0000037Pwj" size="20" type="text" placeholder="Full Name*" class="form-control input-lg" />
+                <input id="first_name" maxlength="40" name="first_name" size="20" type="text" placeholder="First Name*" class="form-control input-lg"/>
               </div>
+
+              <div class="form-group">
+                <input id="last_name" maxlength="80" name="last_name" size="20" type="text" placeholder="Last Name*" class="form-control input-lg"/>
+              </div>
+
               <div class="form-group">
                 <input id="company" maxlength="40" name="company" size="20" type="text" placeholder="Company" class="form-control input-lg" />
               </div>
@@ -231,7 +236,9 @@
       "00N1a0000037Pwo": {required: true, digits: true, min: 25},
       "phone": {required: false, digits: true, minlength: 10},
       "00N1a0000037Pxm": {required: true},
-      "00N1a0000037Pya": {required: true}
+      "00N1a0000037Pya": {required: true},
+      "first_name": {required: true},
+      "last_name": {required: true}
     }
     // messages: {
     //   example5: "Just check the box<h5 class='text-error'>You aren't going to read the EULA</h5>"
